@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import "tailwindcss";
+
+body{
+	font-family: "Inter", serif;
+	color: #000000;
+	font-size: 1rem;
+}
+
+/* to overwrite variables */
+@theme {
+	/* --breakpoint-*: initial; */
+	/* --breakpoint-sm: 40rem;
+	--breakpoint-md: 48rem;
+	--breakpoint-lg: 80rem;
+	--breakpoint-xl: 80rem;
+	--breakpoint-2xl: 80rem; */
+	/* --breakpoint-lg: 64rem;
+	--breakpoint-xl: 80rem;
+	--breakpoint-2xl: 96rem; */
+
+	
+	--font-body: Inter, serif;
+	--font-weight:600;
+	--breakpoint-sm: 40rem;
+	--breakpoint-md: 48rem;
+	--breakpoint-lg: 64rem;
+	--breakpoint-xl: 80rem;
+	/* --breakpoint-2xl: 96rem; */
+	--breakpoint-2xl: 80rem;
+	
+	--container-3xs: 16rem;
+	--container-2xs: 18rem;
+	--container-xs: 20rem;
+	--container-sm: 24rem;
+	--container-md: 28rem;
+	--container-lg: 32rem;
+	--container-xl: 36rem;
+	--container-2xl: 42rem;
+	--container-3xl: 48rem;
+	--container-4xl: 56rem;
+	--container-5xl: 64rem;
+	--container-6xl: 72rem;
+	--container-7xl: 80rem;
+	
+	--color-primary: #5173AF;
+	--color-primary-10: #F4F7FA;
+	--color-gray-50:#F4F4F6;
+	--color-gray-100:#DDDFE3;
+	--color-gray-200:#A9ADB9;
+	--color-gray-300:#5D616C;
+	--color-gray-400:#8C92A2;
+
+	--color-red:#FE597C;
+	--color-red-500:#BF435D;
+	--color-red-50:#FFEBEF;
+
+	--radius-md: 0.75rem;
+	--drop-shadow-input:0 35px 35px rgba(0, 0, 0, 0.25);
+	--drop-shadow-3xl: 0 0 3px #f00; 
+
+}
+
+
+input:-webkit-autofill {
+	background-color: white !important;
+	color: black !important;
+	-webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.input-focus{
+	@apply focus:shadow-[0px_0px_0px_3px_#C7D2E5] focus:border-primary focus:border-1
+}
+
+/* Set container css */
+@utility container {
+	margin-inline: auto;
+	padding-inline: 15px;
+}
+
+
+/* apply css to element using tailwind (If highly need then try this)  */
+
+.customCLass {
+	@apply p-2 text-4xl bg-primary
+}
+
+p{
+	@apply mb-4
+}
+
+.main-content {}
+
+/* How to user variables */
+.my-class {
+	background-color: var(--color-red-500);
+}
+
+/* custom css for media query if needed */
+@media (width >=theme(--breakpoint-lg)) {}
+
+@layer components {
+	.btn {
+		@apply px-4 py-2 rounded-md font-semibold transition duration-200;
+	}
+
+	.btn-primary {
+		@apply bg-blue-500 text-white hover:bg-blue-600;
+	}
+
+	.btn-secondary {
+		@apply bg-gray-500 text-white hover:bg-gray-600;
+	}
+
+	.btn-success {
+		@apply bg-green-500 text-white hover:bg-green-600;
+	}
+
+	.btn-danger {
+		@apply bg-red-500 text-white hover:bg-red-600;
+	}
+
+	.btn-outline {
+		@apply border border-gray-500 text-gray-500 hover:bg-gray-100;
+	}
+}

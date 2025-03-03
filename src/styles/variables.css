@@ -1,0 +1,8 @@
+@theme {
+	--breakpoint-*: initial;
+	--breakpoint-sm: 480px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 1270px;
+	--breakpoint-xl: 1300px;
+	--color-primary: #f00;
+}

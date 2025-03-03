@@ -1,0 +1,4 @@
+
+.header {
+	@apply py-6 text-4xl bg-white
+}
