@@ -659,9 +659,9 @@ const MultiStepForm = () => {
         <>
             <div className='main-content flex-1 pt-[32px] lg:pt-[64px]'>
                 <div className="container">
-                    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-10 lg:gap-[80px]">
+                    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-10 gap-8 xl:gap-[80px]">
                         {/* <div className="bg-red-500 text-white col-span-3 p-4">1</div> */}
-                        <div className="col-span-7 ">
+                        <div className="col-span-7">
                             <div className="grid grid-cols-1 lg:grid-cols-11 lg:gap-[24px]">
                                 <div className="col-span-3">
                                     {/* Progress Tabs */}
